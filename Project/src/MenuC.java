@@ -1,6 +1,10 @@
 
 import java.awt.Color;
+import java.awt.List;
+import java.util.ArrayList;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,9 +23,33 @@ public class MenuC extends javax.swing.JFrame {
      */
     public MenuC() {
         initComponents();
+        jPanel15.setVisible(false);
     }
 public void changecolor(JPanel hover, Color rand) {
         hover.setBackground(rand);
+    }
+         ArrayList<String> list=new ArrayList<String>();
+         ArrayList<Integer> numbers=new ArrayList<Integer>();
+         ArrayList<Integer> x=new ArrayList<Integer>();
+        DefaultTableModel model=new DefaultTableModel();
+        
+        
+        
+        
+              public void showTable(JTable table) {
+        //   model=new DefaultTableModel();
+        model = new DefaultTableModel();
+        Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+        model.setColumnIdentifiers(coloumns);
+        table.setModel(model);
+        DefaultTableModel model11 = (DefaultTableModel) table.getModel();
+        for (int i = 0; i <list.size() ; i++) {
+            Object[] arr1 = new Object[2];
+            arr1[0] = list.get(i);
+            arr1[1] = x.get(i);
+            arr1[2] = numbers.get(i);
+            model11.addRow(arr1);
+        }
     }
 
 
@@ -39,6 +67,9 @@ public void changecolor(JPanel hover, Color rand) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         tab1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -52,22 +83,81 @@ public void changecolor(JPanel hover, Color rand) {
         jLabel8 = new javax.swing.JLabel();
         tab7 = new javax.swing.JPanel();
         jl2 = new javax.swing.JLabel();
+        tab8 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jp1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        label10 = new java.awt.Label();
+        label12 = new java.awt.Label();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        label11 = new java.awt.Label();
+        label13 = new java.awt.Label();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        label14 = new java.awt.Label();
+        label15 = new java.awt.Label();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        label16 = new java.awt.Label();
+        label17 = new java.awt.Label();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        label18 = new java.awt.Label();
+        label19 = new java.awt.Label();
+        jl13 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        label20 = new java.awt.Label();
+        label21 = new java.awt.Label();
+        jl14 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        b1 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        b2 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        b3 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        b4 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        b6 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        b5 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jl19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel15.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel15.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 190));
+
+        getContentPane().add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 670, 500));
 
         jPanel1.setBackground(new java.awt.Color(153, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -95,8 +185,8 @@ public void changecolor(JPanel hover, Color rand) {
             tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tab1Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
-                .addComponent(jLabel4)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         tab1Layout.setVerticalGroup(
             tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,17 +320,18 @@ public void changecolor(JPanel hover, Color rand) {
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon("F:\\21 5 21\\icons8-about-24.png")); // NOI18N
-        jLabel8.setText("About");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-logout-rounded-left-24.png"))); // NOI18N
+        jLabel8.setText("Log Out");
+        jLabel8.setIconTextGap(15);
 
         javax.swing.GroupLayout tab6Layout = new javax.swing.GroupLayout(tab6);
         tab6.setLayout(tab6Layout);
         tab6Layout.setHorizontalGroup(
             tab6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tab6Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(46, 46, 46)
                 .addComponent(jLabel8)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         tab6Layout.setVerticalGroup(
             tab6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,7 +341,7 @@ public void changecolor(JPanel hover, Color rand) {
                 .addContainerGap())
         );
 
-        jPanel1.add(tab6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 263, 232, -1));
+        jPanel1.add(tab6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 220, -1));
 
         tab7.setBackground(new java.awt.Color(153, 0, 0));
         tab7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -295,13 +386,49 @@ public void changecolor(JPanel hover, Color rand) {
 
         jPanel1.add(tab7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 230, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 240, 410));
+        tab8.setBackground(new java.awt.Color(153, 0, 0));
+        tab8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tab8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tab8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tab8MouseExited(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("F:\\21 5 21\\icons8-about-24.png")); // NOI18N
+        jLabel9.setText("About");
+
+        javax.swing.GroupLayout tab8Layout = new javax.swing.GroupLayout(tab8);
+        tab8.setLayout(tab8Layout);
+        tab8Layout.setHorizontalGroup(
+            tab8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tab8Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jLabel9)
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+        tab8Layout.setVerticalGroup(
+            tab8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tab8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(tab8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 263, 232, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 500));
 
         jPanel5.setBackground(new java.awt.Color(255, 51, 51));
 
         jLabel3.setBackground(new java.awt.Color(204, 255, 204));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Desktop\\fast.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fast-food-icon-png-6.png"))); // NOI18N
         jLabel3.setText("Fast Food And Ice-Cream Shop ");
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-cross-mark-button-48.png")); // NOI18N
@@ -317,127 +444,394 @@ public void changecolor(JPanel hover, Color rand) {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(30, 30, 30)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(0, 122, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(0, 132, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(3, 3, 3))
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 170));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 180));
 
         jp1.setBackground(new java.awt.Color(255, 153, 51));
         jp1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-48.png")); // NOI18N
-        jButton3.setText("B.B.Q ");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label10.setText("-");
+        label10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label10MouseClicked(evt);
             }
         });
-        jp1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 150, 50));
+        jPanel9.add(label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-48 (1).png")); // NOI18N
-        jButton5.setText("Pepperoni");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+        label12.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label12.setText("+");
+        label12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label12MouseClicked(evt);
             }
         });
-        jp1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, -1, 50));
+        jPanel9.add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 20, -1));
 
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-five-eighths-48.png")); // NOI18N
-        jButton10.setText("Hawaiian");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+        jLabel2.setText("0");
+        jPanel9.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 160, -1));
+
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label11.setText("-");
+        label11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label11MouseClicked(evt);
             }
         });
-        jp1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 290, 160, 50));
+        jPanel10.add(label11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
-        jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-kawaii-pizza-50.png")); // NOI18N
-        jButton11.setText("Malai Boti");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+        label13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label13.setText("+");
+        label13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label13MouseClicked(evt);
             }
         });
-        jp1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 70, 160, 50));
+        jPanel10.add(label13, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 20, -1));
 
-        jButton12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-coca-cola-48.png")); // NOI18N
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+        jLabel7.setText("0");
+        jPanel10.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 160, -1));
+
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label14.setText("-");
+        label14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label14MouseClicked(evt);
             }
         });
-        jp1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 126, 50));
+        jPanel11.add(label14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
-        jButton13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-italian-pizza-30.png")); // NOI18N
-        jButton13.setText("Cheese ");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+        label15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label15.setText("+");
+        label15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label15MouseClicked(evt);
             }
         });
-        jp1.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 160, 50));
+        jPanel11.add(label15, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 0, 20, -1));
 
-        jButton14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton14.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-48 (1).png")); // NOI18N
-        jButton14.setText("Vegetarian");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+        jLabel11.setText("0");
+        jPanel11.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 170, -1));
+
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label16.setText("-");
+        label16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label16MouseClicked(evt);
             }
         });
-        jp1.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 180, 160, 50));
+        jPanel12.add(label16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
-        getContentPane().add(jp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 640, 410));
+        label17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label17.setText("+");
+        label17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label17MouseClicked(evt);
+            }
+        });
+        jPanel12.add(label17, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 0, 20, -1));
+
+        jLabel12.setText("0");
+        jPanel12.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 30, 30));
+
+        jp1.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 160, -1));
+
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label18.setText("-");
+        label18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label18MouseClicked(evt);
+            }
+        });
+        jPanel13.add(label18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        label19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label19.setText("+");
+        label19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label19MouseClicked(evt);
+            }
+        });
+        jPanel13.add(label19, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 0, 20, -1));
+
+        jl13.setText("0");
+        jPanel13.add(jl13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 170, -1));
+
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label20.setText("-");
+        label20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label20MouseClicked(evt);
+            }
+        });
+        jPanel14.add(label20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        label21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label21.setText("+");
+        label21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label21MouseClicked(evt);
+            }
+        });
+        jPanel14.add(label21, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 0, 20, -1));
+
+        jl14.setText("0");
+        jPanel14.add(jl14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 170, -1));
+
+        jButton1.setText("Buy Now");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jp1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 440, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        b1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        b1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-kawaii-pizza-50.png")); // NOI18N
+        b1.setText("Malai Boti");
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setText("Rs:350");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+
+        jp1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, 80));
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        b2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        b2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-48.png")); // NOI18N
+        b2.setText("B.B.Q ");
+        b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 50));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setText("Rs:300");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+
+        jp1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 160, 80));
+
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+
+        b3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        b3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-48 (1).png")); // NOI18N
+        b3.setText("Vegetarian");
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3ActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel15.setText("Rs:300");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel15)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jp1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 170, 80));
+
+        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
+
+        b4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        b4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-48 (1).png")); // NOI18N
+        b4.setText("Pepperoni");
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setText("Rs:300");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(b4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(53, 53, 53))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(b4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel16)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jp1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 160, 80));
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
+
+        b6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        b6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-italian-pizza-30.png")); // NOI18N
+        b6.setText("Cheese ");
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b6ActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel18.setText("Rs:350");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel18)
+                .addGap(53, 53, 53))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel18)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jp1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 160, 80));
+
+        jPanel8.setBackground(new java.awt.Color(204, 204, 204));
+
+        b5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        b5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-pizza-five-eighths-48.png")); // NOI18N
+        b5.setText("Hawaiian");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel17.setText("Rs:350");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(b5, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addComponent(b5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel17)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        jp1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 170, 80));
+
+        jl19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jp1.add(jl19, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 210, -1));
+
+        getContentPane().add(jp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 670, 500));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_b2ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_b4ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_b1ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_b6ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_b3ActionPerformed
 
     private void tab1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab1MouseClicked
         // TODO add your handling code here:
@@ -455,9 +849,10 @@ public void changecolor(JPanel hover, Color rand) {
 
     private void tab2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseClicked
         // TODO add your handling code here:
+        this.dispose();
         Burger bg=new Burger();
         bg.setVisible(true);
-        jp1.setVisible(false);
+        
     }//GEN-LAST:event_tab2MouseClicked
 
     private void tab2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseEntered
@@ -506,7 +901,7 @@ public void changecolor(JPanel hover, Color rand) {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+        this.setVisible(false);
         loginC l=new loginC();
                 l.setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
@@ -524,11 +919,10 @@ public void changecolor(JPanel hover, Color rand) {
 
     private void tab6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab6MouseClicked
         // TODO add your handling code here:
-        About a=new About();
-        a.setVisible(true);
-        loginC p2=new loginC();
-                p2.setVisible(false);
         this.setVisible(false);
+        loginC p2=new loginC();
+                p2.setVisible(true);
+        
     }//GEN-LAST:event_tab6MouseClicked
 
     private void tab6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab6MouseEntered
@@ -555,35 +949,373 @@ public void changecolor(JPanel hover, Color rand) {
         // TODO add your handling code here:
     }//GEN-LAST:event_tab7MouseClicked
 
+    private void tab8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tab8MouseClicked
+
+    private void tab8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab8MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tab8MouseEntered
+
+    private void tab8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab8MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tab8MouseExited
+
+    private void label10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label10MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel2.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel2.setText(s);
+        }
+       
+    }//GEN-LAST:event_label10MouseClicked
+
+    private void label12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label12MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel2.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel2 .setText(s);
+        }
+        
+    }//GEN-LAST:event_label12MouseClicked
+
+    private void label11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label11MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel7.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel7.setText(s);
+        }
+    }//GEN-LAST:event_label11MouseClicked
+
+    private void label13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label13MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel7.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel7 .setText(s);
+        }
+    }//GEN-LAST:event_label13MouseClicked
+
+    private void label14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label14MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel11.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel11.setText(s);
+        }
+    }//GEN-LAST:event_label14MouseClicked
+
+    private void label15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label15MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel11.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel11 .setText(s);
+        }
+    }//GEN-LAST:event_label15MouseClicked
+
+    private void label16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label16MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel12.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel12.setText(s);
+        }
+    }//GEN-LAST:event_label16MouseClicked
+
+    private void label17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label17MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel12.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel12 .setText(s);
+        }
+    }//GEN-LAST:event_label17MouseClicked
+
+    private void label18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label18MouseClicked
+        // TODO add your handling code here:
+        String s=jl13.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jl13.setText(s);
+        }
+    }//GEN-LAST:event_label18MouseClicked
+
+    private void label19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label19MouseClicked
+        // TODO add your handling code here:
+        String s=jl13.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jl13 .setText(s);
+        }
+    }//GEN-LAST:event_label19MouseClicked
+
+    private void label20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label20MouseClicked
+        // TODO add your handling code here:
+        String s=jl14.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jl14.setText(s);
+        }
+    }//GEN-LAST:event_label20MouseClicked
+
+    private void label21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label21MouseClicked
+        // TODO add your handling code here:
+        String s=jl14.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jl14 .setText(s);
+        }
+    }//GEN-LAST:event_label21MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        ArrayList<String> list=new ArrayList<String>();
+        ArrayList<Integer> numbers=new ArrayList<Integer>();
+        String b1=jLabel11.getText();
+        int mb=Integer.parseInt(b1);
+        String b2=jLabel2.getText();
+        int bbq=Integer.parseInt(b2);
+        String b3=jl13.getText();
+        int veg=Integer.parseInt(b3);
+        String b4=jLabel7.getText();
+        int pepro=Integer.parseInt(b4);
+        String b5=jl14.getText();
+        int hawaii=Integer.parseInt(b5);
+        String b6=jLabel12.getText();
+        int cheese=Integer.parseInt(b6);
+        int []items={mb,bbq,veg,pepro,hawaii,cheese};
+       for(int i=0;i<6;i++)
+       {
+           if(items[i]>0)
+           {
+               System.out.println("Item[i]="+items[i]);
+               switch(i)
+               {
+                   case 0:
+                       list.add("Malai Boti");
+                       System.out.println("list="+list.get(0));
+                       numbers.add(mb*350);
+                       x.add(i);
+                       break;
+                       case 1:
+                            list.add("BBQ");
+                       numbers.add(bbq*300);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       case 2:
+                           list.add("Vegetarian");
+                       numbers.add(veg*300);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       case 3:
+                           list.add("Pepperoni");
+                       numbers.add(pepro*300);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       case 4:
+                           list.add("Hawaiian");
+                       numbers.add(hawaii*350);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       case 5:
+                           list.add("Cheese");
+                       numbers.add(cheese*350);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       default:
+                           jl19.setText("Please Select any Item");
+               }
+           }
+       }
+       showTable(jTable1);
+       jPanel15.setVisible(true);
+       jTable1.setVisible(true);
+       jp1.setVisible(false);
+       
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JButton b3;
+    private javax.swing.JButton b4;
+    private javax.swing.JButton b5;
+    private javax.swing.JButton b6;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel jl13;
+    private javax.swing.JLabel jl14;
+    private javax.swing.JLabel jl19;
     private javax.swing.JLabel jl2;
     private javax.swing.JPanel jp1;
+    private java.awt.Label label10;
+    private java.awt.Label label11;
+    private java.awt.Label label12;
+    private java.awt.Label label13;
+    private java.awt.Label label14;
+    private java.awt.Label label15;
+    private java.awt.Label label16;
+    private java.awt.Label label17;
+    private java.awt.Label label18;
+    private java.awt.Label label19;
+    private java.awt.Label label20;
+    private java.awt.Label label21;
     private javax.swing.JPanel tab1;
     private javax.swing.JPanel tab2;
     private javax.swing.JPanel tab3;
     private javax.swing.JPanel tab5;
     private javax.swing.JPanel tab6;
     private javax.swing.JPanel tab7;
+    private javax.swing.JPanel tab8;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,17 +30,42 @@ public class Drink extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLA1 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        label10 = new java.awt.Label();
+        label12 = new java.awt.Label();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        label11 = new java.awt.Label();
+        label13 = new java.awt.Label();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        label14 = new java.awt.Label();
+        label15 = new java.awt.Label();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        label16 = new java.awt.Label();
+        label17 = new java.awt.Label();
+        jLabel6 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jp3.setBackground(new java.awt.Color(255, 204, 0));
         jp3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -59,29 +84,45 @@ public class Drink extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("RS:70");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(44, 44, 44))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 35, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(44, 44, 44))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10)
+                                .addGap(53, 53, 53))))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jp3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 150, 150));
+        jp3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 150, 160));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -96,6 +137,9 @@ public class Drink extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setText("RS:70");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -109,17 +153,22 @@ public class Drink extends javax.swing.JFrame {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(17, 17, 17)))
                 .addContainerGap())
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(jLabel11))
         );
 
-        jp3.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 150, 150));
+        jp3.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 150, 160));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -134,29 +183,40 @@ public class Drink extends javax.swing.JFrame {
             }
         });
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setText("RS:70");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabel8))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(jLabel12)))
+                        .addGap(0, 40, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel8)
-                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(jLabel12))
         );
 
-        jp3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        jp3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 254, -1, 160));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -171,29 +231,156 @@ public class Drink extends javax.swing.JFrame {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setText("RS:70");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(51, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel9))
+                .addGap(47, 47, 47))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addGap(47, 47, 47))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(jLabel13))
         );
 
-        jp3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
+        jp3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, 160));
+
+        jLA1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Stallion\\Downloads\\icons8-cross-mark-button-48.png")); // NOI18N
+        jLA1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLA1MouseClicked(evt);
+            }
+        });
+        jp3.add(jLA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, -1, -1));
+
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label10.setText("-");
+        label10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label10MouseClicked(evt);
+            }
+        });
+        jPanel9.add(label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        label12.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label12.setText("+");
+        label12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label12MouseClicked(evt);
+            }
+        });
+        jPanel9.add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 20, -1));
+
+        jLabel2.setText("0");
+        jPanel9.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 150, -1));
+
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label11.setText("-");
+        label11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label11MouseClicked(evt);
+            }
+        });
+        jPanel10.add(label11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        label13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label13.setText("+");
+        label13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label13MouseClicked(evt);
+            }
+        });
+        jPanel10.add(label13, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 20, -1));
+
+        jLabel3.setText("0");
+        jPanel10.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 150, -1));
+
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label14.setText("-");
+        label14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label14MouseClicked(evt);
+            }
+        });
+        jPanel11.add(label14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        label15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label15.setText("+");
+        label15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label15MouseClicked(evt);
+            }
+        });
+        jPanel11.add(label15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 20, -1));
+
+        jLabel4.setText("0");
+        jPanel11.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 150, -1));
+
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label16.setText("-");
+        label16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label16MouseClicked(evt);
+            }
+        });
+        jPanel12.add(label16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        label17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        label17.setText("+");
+        label17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label17MouseClicked(evt);
+            }
+        });
+        jPanel12.add(label17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 20, -1));
+
+        jLabel6.setText("0");
+        jPanel12.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 20, 30));
+
+        jp3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 150, -1));
+
+        jButton5.setText("Buy Now");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jp3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -201,7 +388,7 @@ public class Drink extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 701, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jp3, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)))
         );
@@ -209,9 +396,7 @@ public class Drink extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 469, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jp3, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)))
+                .addComponent(jp3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE))
         );
 
         pack();
@@ -233,6 +418,170 @@ public class Drink extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jLA1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLA1MouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+        MenuC m2=new MenuC();
+        m2.setVisible(true);
+    }//GEN-LAST:event_jLA1MouseClicked
+
+    private void label10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label10MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel2.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel2.setText(s);
+        }
+       
+    }//GEN-LAST:event_label10MouseClicked
+
+    private void label12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label12MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel2.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel2.setText(s);
+        }
+      
+    }//GEN-LAST:event_label12MouseClicked
+
+    private void label11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label11MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel3.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel3.setText(s);
+        }
+    }//GEN-LAST:event_label11MouseClicked
+
+    private void label13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label13MouseClicked
+        // TODO add your handling code here:
+                String s=jLabel3.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel3.setText(s);
+        }
+    }//GEN-LAST:event_label13MouseClicked
+
+    private void label14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label14MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel4.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel4.setText(s);
+        }
+    }//GEN-LAST:event_label14MouseClicked
+
+    private void label15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label15MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel4.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel4.setText(s);
+        }
+    }//GEN-LAST:event_label15MouseClicked
+
+    private void label16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label16MouseClicked
+        // TODO add your handling code here:
+        String s=jLabel6.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
+
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            jLabel6.setText(s);
+        }
+    }//GEN-LAST:event_label16MouseClicked
+
+    private void label17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label17MouseClicked
+        // TODO add your handling code here:
+         String s=jLabel6.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
+
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            jLabel6.setText(s);
+        }
+    }//GEN-LAST:event_label17MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        String b1=jLabel3.getText();
+        int a1=Integer.parseInt(b1);
+        String b2=jLabel4.getText();
+        int a2=Integer.parseInt(b2);
+        String b3=jLabel6.getText();
+        int a3=Integer.parseInt(b3);
+        String b4=jLabel2.getText();
+        int a4=Integer.parseInt(b4);
+        int bill=(a1*70)+(a2*70)+(a3*70)+(a4*70);
+        System.out.println("Bill of drinks is:"+bill);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -274,14 +623,37 @@ public class Drink extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLA1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jp3;
+    private java.awt.Label label10;
+    private java.awt.Label label11;
+    private java.awt.Label label12;
+    private java.awt.Label label13;
+    private java.awt.Label label14;
+    private java.awt.Label label15;
+    private java.awt.Label label16;
+    private java.awt.Label label17;
     // End of variables declaration//GEN-END:variables
 }

@@ -54,7 +54,7 @@ public class loginC extends javax.swing.JFrame {
 
         label1.setBackground(new java.awt.Color(204, 204, 255));
         label1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        label1.setText("LOG IN As Customer");
+        label1.setText("LOGIN As Customer");
 
         panel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -146,7 +146,7 @@ public class loginC extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(213, 213, 213))
+                .addGap(226, 226, 226))
         );
         panel2Layout.setVerticalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +192,9 @@ public class loginC extends javax.swing.JFrame {
     private void button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button2MouseClicked
         // TODO add your handling code here:
         
-        System.exit(0);
+        this.setVisible(false);
+        Loginmain lm=new Loginmain();
+        lm.setVisible(true);
     }//GEN-LAST:event_button2MouseClicked
 
     private void formWindowDeiconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowDeiconified
