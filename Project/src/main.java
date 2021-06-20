@@ -2624,7 +2624,7 @@ jTabbedPane1.setSelectedIndex(6);
                     Object[] arr1 = new Object[3];
         
         
-                          System.out.println(Resti.getinstance().getBills().size());
+                          
                DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
                 for (int i = 0; i <r.getBills().size(); i++) {
             
@@ -2760,7 +2760,7 @@ jTabbedPane1.setSelectedIndex(6);
                     Object[] arr1 = new Object[3];
         
         
-                          System.out.println(Resti.getinstance().getBills().size());
+                        
                DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
                 for (int i = 0; i <r.getBills().size(); i++) {
             
@@ -2800,47 +2800,38 @@ jTabbedPane1.setSelectedIndex(6);
         // TODO add your handling code here:
         String out="";
         try{
-           
+            FileWriter fl2=new FileWriter("Numbers(x).txt");
+            for(int i=0;i<r.getBills().size();i++){
+                fl2.write(r.getBills().get(i).getItems()+"\n");
+            }
+            
+            fl2.close();
+            
             FileWriter fl1=new FileWriter("Items.txt");
-            for(int i=0;i<Resti.getinstance().getBills().size();i++){
-                 out=out+r.getBills().get(0).getName()+" , "+r.getBills().get(1).getName()+" , "+r.getBills().get(2).getName()+" , "+r.getBills().get(3).getName()+" , "+r.getBills().get(4).getName()+" , "+r.getBills().get(5).getName()+" , ";
+            for(int i=0;i<r.getBills().size();i++){
+                 fl1.write(r.getBills().get(i).getName()+"\n");
                  
             }
            fl1.close();
            
             
+            FileWriter fl3=new FileWriter("Bill.txt");
+            for(int i=0;i<r.getBills().size();i++){
+                fl3.write(r.getBills().get(i).getBill()+"\n");
+            }
             
+            fl3.close();
             
-            
-            File fileWriter=new File("Bill.txt");
-            FileWriter fl=new FileWriter("Bill.txt");
-            fl.write(" "+r.getBills().get(0).getName()+" , "+r.getBills().get(0).getItems()+" , "+r.getBills().get(0).getBill()+"\n");
-         fl.write(" "+r.getBills().get(1).getName()+" , "+r.getBills().get(1).getItems()+" , "+r.getBills().get(1).getBill()+"\n");
-         fl.write(" "+r.getBills().get(2).getName()+" , "+r.getBills().get(2).getItems()+" , "+r.getBills().get(2).getBill()+"\n");
-        fl.write(" "+r.getBills().get(3).getName()+" , "+r.getBills().get(3).getItems()+" , "+r.getBills().get(3).getBill()+"\n");
-            fl.write(" "+r.getBills().get(4).getName()+" , "+r.getBills().get(4).getItems()+" , "+r.getBills().get(4).getBill()+"\n");
-            fl.write(" "+r.getBills().get(5).getName()+" , "+r.getBills().get(5).getItems()+" , "+r.getBills().get(5).getBill()+"\n");
-//             fl.write(" "+r.getBills().get(6).getName()+" , "+r.getBills().get(6).getItems()+" , "+r.getBills().get(6).getBill()+"\n");
-//             fl.write(" "+r.getBills().get(7).getName()+" , "+r.getBills().get(7).getItems()+" , "+r.getBills().get(7).getBill()+"\n");
-//        fl.write(" "+r.getBills().get(8).getName()+" , "+r.getBills().get(8).getItems()+" , "+r.getBills().get(8).getBill()+"\n");
-//         fl.write(" "+r.getBills().get(9).getName()+" , "+r.getBills().get(9).getItems()+" , "+r.getBills().get(9).getBill()+"\n"); 
-//                  fl.write(" "+r.getBills().get(10).getName()+" , "+r.getBills().get(10).getItems()+" , "+r.getBills().get(10).getBill()+"\n");     
-//         fl.write(" "+r.getBills().get(11).getName()+" , "+r.getBills().get(11).getItems()+" , "+r.getBills().get(11).getBill()+"\n");     
-//         fl.write(" "+r.getBills().get(12).getName()+" , "+r.getBills().get(12).getItems()+" , "+r.getBills().get(12).getBill()+"\n");     
-//         fl.write(" "+r.getBills().get(13).getName()+" , "+r.getBills().get(9).getItems()+" , "+r.getBills().get(9).getBill()+"\n");     
-//         fl.write(" "+r.getBills().get(14).getName()+" , "+r.getBills().get(9).getItems()+" , "+r.getBills().get(9).getBill()+"\n");     
-//         fl.write(" "+r.getBills().get(15).getName()+" , "+r.getBills().get(9).getItems()+" , "+r.getBills().get(9).getBill()+"\n");     
-//         fl.write(" "+r.getBills().get(16).getName()+" , "+r.getBills().get(9).getItems()+" , "+r.getBills().get(9).getBill()+"\n");     
-      fl.write(r.getBills().get(17).getName()+" , "+r.getBills().get(9).getItems()+" , "+r.getBills().get(9).getBill());     
-
+            String a="";
+            FileWriter fl=new FileWriter("Data.txt");
+            for(int i=0; i<r.getBills().size();i++){
+            fl.write(" "+r.getBills().get(i).getName()+" , "+r.getBills().get(i).getItems()+" , "+r.getBills().get(i).getBill()+"\n");
+            }
+//            
             fl.close();
             
-            if(fileWriter.createNewFile()){
-                System.out.println("file created successfully"+fileWriter.getName());
-            }
-            else{
-               
-            }
+            
+           
         }
         catch(IOException e){
             e.printStackTrace();

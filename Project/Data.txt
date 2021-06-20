@@ -1,0 +1,5 @@
+ Malai Boti , 3 , 1050
+ BBQ , 3 , 900
+ Vegetarian , 3 , 900
+ Hawaiian , 2 , 700
+ Cheese , 2 , 700

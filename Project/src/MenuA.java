@@ -28,20 +28,20 @@ private DefaultTableModel model=new DefaultTableModel();
        // jTabbedPane2.setSelectedIndex(0);
         Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
         model = new DefaultTableModel(coloumns,0);
-        jTable1.setModel(model);
+        jt1.setModel(model);
         //     model.setColumnIdentifiers(coloumns);
         //                    jTable1.setModel(model);
         Object[] arr1 = new Object[3];
 
         System.out.println(Resti.getinstance().getBills().size());
-        DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
-        for (int i = 0; i <Resti.getinstance().getBills().size(); i++) {
+        DefaultTableModel s = (DefaultTableModel) jt1.getModel();
+        for (int i = 0; i <a.getBills().size(); i++) {
 
             arr1[0] = a.getBills().get(i).getName();
             arr1[1] = a.getBills().get(i).getItems();
             arr1[2] = a.getBills().get(i).getBill();
             model.addRow(arr1);
-             jTable1.setModel(model);
+             jt1.setModel(model);
         }
     }
 
@@ -68,7 +68,7 @@ private DefaultTableModel model=new DefaultTableModel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         Orderpanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jt1 = new javax.swing.JTable();
         Feedbackpanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -225,8 +225,8 @@ private DefaultTableModel model=new DefaultTableModel();
         Orderpanel.setBackground(new java.awt.Color(102, 0, 255));
         Orderpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setBackground(new java.awt.Color(0, 255, 204));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jt1.setBackground(new java.awt.Color(0, 255, 204));
+        jt1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -237,7 +237,7 @@ private DefaultTableModel model=new DefaultTableModel();
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jt1);
 
         Orderpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 410));
 
@@ -268,19 +268,20 @@ private DefaultTableModel model=new DefaultTableModel();
     public void showTable(JTable table,ArrayList<Bill> list){
         Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
         model = new DefaultTableModel(coloumns,0);
+        jt1.setModel(model);
         //     model.setColumnIdentifiers(coloumns);
         //                    jTable1.setModel(model);
         Object[] arr1 = new Object[3];
 
-        System.out.println(Resti.getinstance().getBills().size());
-        DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
+        
+        DefaultTableModel s = (DefaultTableModel) jt1.getModel();
         for (int i = 0; i <a.getBills().size(); i++) {
 
             arr1[0] = list.get(i).getName();
             arr1[1] = list.get(i).getItems();
             arr1[2] = list.get(i).getBill();
             model.addRow(arr1);
-            jTable1.setModel(model);
+            jt1.setModel(model);
         }
     }
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
@@ -363,6 +364,6 @@ private DefaultTableModel model=new DefaultTableModel();
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jt1;
     // End of variables declaration//GEN-END:variables
 }
