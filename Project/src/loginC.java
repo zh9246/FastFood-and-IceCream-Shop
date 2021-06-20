@@ -168,9 +168,9 @@ public class loginC extends javax.swing.JFrame {
        
        // TODO add your handling code here:
        
-         if(tf1.getText().equals("customer@gmail.com")&& pf1.getText().equals("customer"))
+         if(tf1.getText().equals("customer")&& pf1.getText().equals("12345"))
          {
-            new MenuC().setVisible(true);
+            new main().setVisible(true);
          }
          
          else{
@@ -249,6 +249,6 @@ public class loginC extends javax.swing.JFrame {
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private javax.swing.JPasswordField pf1;
-    private java.awt.TextField tf1;
+    public java.awt.TextField tf1;
     // End of variables declaration//GEN-END:variables
 }

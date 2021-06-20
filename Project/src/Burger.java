@@ -1,5 +1,11 @@
 
+import java.awt.Color;
+import java.math.MathContext;
+import java.util.ArrayList;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,14 +18,46 @@ import javax.swing.JLabel;
  * @author Stallion
  */
 public class Burger extends javax.swing.JFrame {
-
+ Resti r=Resti.getinstance();
+ MenuC m=new MenuC();
+ ArrayList<String> list=new ArrayList<String>();
+         ArrayList<Integer> numbers=new ArrayList<Integer>();
+         ArrayList<Integer> x=new ArrayList<Integer>();
+        DefaultTableModel model=new DefaultTableModel();
     /**
      * Creates new form Burger
      */
     public Burger() {
         initComponents();
     }
+    public void changecolor(JPanel hover, Color rand) {
+        hover.setBackground(rand);
+    }
+         
+        
+        
+        
+        
+             public void showTable(JTable table,ArrayList<Integer>x,ArrayList<String>items,ArrayList<Integer>numbers) {
+        //   model=new DefaultTableModel();
+        model = new DefaultTableModel();
+        Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+        model.setColumnIdentifiers(coloumns);
+                    table.setModel(model);
 
+                  
+       // DefaultTableModel s = (DefaultTableModel) table.getModel();
+        for (int i = 0; i <list.size() ; i++) {
+            Object[] arr1 = new Object[2];
+            System.out.println("list[i]="+list.get(i));
+            arr1[0] = list.get(i);
+            arr1[1] = x.get(i);
+            arr1[2] = numbers.get(i);
+            model.addRow(arr1);
+        }
+    }
+    
+    
     public void minuswala(JLabel j)
     {
         String s=j.getText();
@@ -470,16 +508,84 @@ public class Burger extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+         m=new MenuC();
+         ArrayList<String> list=new ArrayList<String>();
+        ArrayList<Integer> numbers=new ArrayList<Integer>();
         String b1=jLabel2.getText();
-        int a1=Integer.parseInt(b1);
+        int ZB=Integer.parseInt(b1);
        String b2=jLabel3.getText();
-       int a2=Integer.parseInt(b2);
+       int CB=Integer.parseInt(b2);
        String b3=jLabel1.getText();
-       int a3=Integer.parseInt(b3);
+       int AB=Integer.parseInt(b3);
        String b4=jLabel4.getText();
-       int a4=Integer.parseInt(b4);
-        int bill=(a1*150)+(a2*100)+(a3*80)+(a4*180);
-        System.out.println("Bill is:"+bill);
+       int GB=Integer.parseInt(b4);
+       int []items={ZB,CB,AB,GB};
+       for(int i=0;i<4;i++)
+       {
+           if(items[i]>0)
+           {
+               
+               switch(i)
+               {
+                   case 0:
+                       Bill b=new Bill();
+                       b.setName("Zinger Burger");
+                       b.setItems(ZB);
+                       b.setBill(ZB*150);
+                       r.getBills().add(b);
+                       break;
+                       case 1:
+                             Bill bb=new Bill();
+                       bb.setName("Chicken Burger");
+                       bb.setItems(CB);
+                       bb.setBill(CB*100);
+                       r.getBills().add(bb);
+                        
+                       break;
+                       case 2:
+                            Bill bb1=new Bill();
+                       bb1.setName("Anda Burger");
+                       bb1.setItems(AB);
+                       bb1.setBill(AB*80);
+                       r.getBills().add(bb1);
+                        
+                       break;
+                       case 3:
+                           Bill bb2=new Bill();
+                       bb2.setName("Grill Burger");
+                       bb2.setItems(GB);
+                       bb2.setBill(GB*100);
+                       r.getBills().add(bb2);
+                        
+                       break;
+                       default:
+                           
+                           
+                           
+               }
+           }
+       }
+       m.setVisible(true);
+       this.setVisible(false);
+//       Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+//      model = new DefaultTableModel(coloumns,0);
+////        model.setColumnIdentifiers(coloumns);
+////                    jTable1.setModel(model);
+//            Object[] arr1 = new Object[3];        
+//
+//                  
+//                  System.out.println(Resti.getinstance().getBills().size());
+//       DefaultTableModel s = (DefaultTableModel) m.jTable1.getModel();
+//        for (int i = 0; i <r.getBills().size(); i++) {
+//            
+//            
+//            arr1[0] = r.getBills().get(i).getName();
+//            arr1[1] = r.getBills().get(i).getItems();
+//            arr1[2] = r.getBills().get(i).getBill();
+//            model.addRow(arr1);
+//            m.jTable1.setModel(model);
+//            }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

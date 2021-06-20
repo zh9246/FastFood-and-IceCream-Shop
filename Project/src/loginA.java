@@ -172,7 +172,7 @@ public class loginA extends javax.swing.JFrame {
 
         // TODO add your handling code here:
 
-        if(tf1.getText().equals("admin@gmail.com")&& pf1.getText().equals("admin"))
+        if(tf1.getText().equals("admin")&& pf1.getText().equals("12345"))
         {
             new MenuA().setVisible(true);
         }

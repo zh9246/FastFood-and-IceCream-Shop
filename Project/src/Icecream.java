@@ -1,3 +1,10 @@
+
+import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,7 +23,30 @@ public class Icecream extends javax.swing.JFrame {
     public Icecream() {
         initComponents();
     }
-
+public void changecolor(JPanel hover, Color rand) {
+        hover.setBackground(rand);
+    }
+         ArrayList<String> list=new ArrayList<String>();
+         ArrayList<Integer> numbers=new ArrayList<Integer>();
+         ArrayList<Integer> x=new ArrayList<Integer>();
+        DefaultTableModel model=new DefaultTableModel();
+        
+        
+        
+        
+        public void showTable(JTable table) {
+        //   model=new DefaultTableModel();
+        model = new DefaultTableModel();
+        Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+        model.setColumnIdentifiers(coloumns);
+        table.setModel(model);
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        for (int i = 0; i <list.size() ; i++) {
+            Object[] arr1 = {list.get(i),x.get(i),numbers.get(i)};
+            
+            model.addRow(arr1);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -543,15 +573,52 @@ public class Icecream extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         String b1=jLabel3.getText();
-        int a1=Integer.parseInt(b1);
+        int cne=Integer.parseInt(b1);
         String b2=jLabel4.getText();
-        int a2=Integer.parseInt(b2);
+        int cp=Integer.parseInt(b2);
         String b3=jLabel8.getText();
-        int a3=Integer.parseInt(b3);
+        int kul=Integer.parseInt(b3);
         String b4=jLabel10.getText();
-        int a4=Integer.parseInt(b4);
-        int bill=(a1*50)+(a2*150)+(a3*70)+(a4*250);
-        System.out.println("Bill of icecream is:"+bill);
+        int bx=Integer.parseInt(b4);
+        int []items={cne,cp,kul,bx};
+       for(int i=0;i<4;i++)
+       {
+           if(items[i]>0)
+           {
+               System.out.println("Item[i]="+items[i]);
+               switch(i)
+               {
+                   case 0:
+                       list.add("Cone");
+                       System.out.println("list="+list.get(0));
+                       numbers.add(cne*70);
+                       x.add(i);
+                       break;
+                       case 1:
+                            list.add("Cup");
+                       numbers.add(cp*70);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       case 2:
+                           list.add("Kulfi");
+                       numbers.add(kul*70);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       case 3:
+                           list.add("Box");
+                       numbers.add(bx*70);
+                       x.add(i);
+                        System.out.println("list="+list.get(0));
+                       break;
+                       default:
+                           MenuC m=new MenuC();
+                           
+                           
+               }
+           }
+       }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jLA1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLA1MouseClicked

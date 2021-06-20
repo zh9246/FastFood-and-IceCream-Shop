@@ -2,6 +2,7 @@
 import java.awt.Color;
 import java.awt.List;
 import java.util.ArrayList;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -18,42 +19,80 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MenuC extends javax.swing.JFrame {
 
+         Resti r=Resti.getinstance();
+         private ArrayList<String> list=new ArrayList<>();
+         private ArrayList<Integer> numbers=new ArrayList<>();
+         private ArrayList<Integer> x=new ArrayList<>();
+         private DefaultTableModel model=new DefaultTableModel();
+        
     /**
      * Creates new form Menu
      */
     public MenuC() {
         initComponents();
         jPanel15.setVisible(false);
+        
+        
     }
 public void changecolor(JPanel hover, Color rand) {
         hover.setBackground(rand);
     }
-         ArrayList<String> list=new ArrayList<String>();
-         ArrayList<Integer> numbers=new ArrayList<Integer>();
-         ArrayList<Integer> x=new ArrayList<Integer>();
-        DefaultTableModel model=new DefaultTableModel();
+    
         
         
         
-        
-              public void showTable(JTable table) {
+              public void showTable(JTable table,ArrayList<Integer>x,ArrayList<String>items,ArrayList<Integer>numbers) {
         //   model=new DefaultTableModel();
         model = new DefaultTableModel();
         Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
         model.setColumnIdentifiers(coloumns);
-        table.setModel(model);
-        DefaultTableModel model11 = (DefaultTableModel) table.getModel();
+                    table.setModel(model);
+
+                  
+       // DefaultTableModel s = (DefaultTableModel) table.getModel();
         for (int i = 0; i <list.size() ; i++) {
             Object[] arr1 = new Object[2];
+            System.out.println("list[i]="+list.get(i));
             arr1[0] = list.get(i);
             arr1[1] = x.get(i);
             arr1[2] = numbers.get(i);
-            model11.addRow(arr1);
+            model.addRow(arr1);
         }
     }
 
+public void minuswala(JLabel j)
+    {
+        String s=j.getText();
+        int a=Integer.parseInt(s);
+        if(a==0)
+        {
 
+        }
+        else if(a>0)
+        {
+            a--;
+            s="";
+            s=s+a;
+            j.setText(s);
+        }
+    }
+    
+      public void pluswala(JLabel j)
+      {
+                  String s=j.getText();
+        int a=Integer.parseInt(s);
+        if(a==10)
+        {
 
+        }
+        else
+        {
+            a++;
+            s="";
+            s=s+a;
+            j.setText(s);
+        }
+      }
 
 
 
@@ -67,9 +106,14 @@ public void changecolor(JPanel hover, Color rand) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel16 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jsp1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel19 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         tab1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -134,6 +178,19 @@ public void changecolor(JPanel hover, Color rand) {
         jLabel17 = new javax.swing.JLabel();
         jl19 = new javax.swing.JLabel();
 
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jButton2.setText("jButton2");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
@@ -142,20 +199,35 @@ public void changecolor(JPanel hover, Color rand) {
         jPanel15.setBackground(new java.awt.Color(255, 102, 102));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setBackground(new java.awt.Color(255, 204, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jsp1.setViewportView(jTable1);
 
-        jPanel15.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 190));
+        jPanel15.add(jsp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 670, 290));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel19.setText("Your Selected Items");
+        jPanel15.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setText("Cancel");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
+
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setText("Succeed");
+        jPanel15.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, -1, 30));
 
         getContentPane().add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 670, 500));
 
@@ -442,21 +514,21 @@ public void changecolor(JPanel hover, Color rand) {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel1))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 132, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 180));
@@ -850,8 +922,11 @@ public void changecolor(JPanel hover, Color rand) {
     private void tab2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseClicked
         // TODO add your handling code here:
         this.dispose();
-        Burger bg=new Burger();
-        bg.setVisible(true);
+        Burger b=new Burger();
+        b.setVisible(true);
+        
+        
+        
         
     }//GEN-LAST:event_tab2MouseClicked
 
@@ -1169,6 +1244,7 @@ public void changecolor(JPanel hover, Color rand) {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         ArrayList<String> list=new ArrayList<String>();
         ArrayList<Integer> numbers=new ArrayList<Integer>();
         String b1=jLabel11.getText();
@@ -1188,51 +1264,99 @@ public void changecolor(JPanel hover, Color rand) {
        {
            if(items[i]>0)
            {
-               System.out.println("Item[i]="+items[i]);
+               
+                
                switch(i)
                {
                    case 0:
-                       list.add("Malai Boti");
-                       System.out.println("list="+list.get(0));
-                       numbers.add(mb*350);
-                       x.add(i);
+                      
+                       Bill b=new Bill();
+                       b.setName("Malai Boti");
+                       b.setItems(mb);
+                       b.setBill(mb*350);
+                       r.getBills().add(b);
+                       
+                       
+                       
                        break;
                        case 1:
-                            list.add("BBQ");
-                       numbers.add(bbq*300);
-                       x.add(i);
-                        System.out.println("list="+list.get(0));
+                           
+                       Bill bb=new Bill();
+                       bb.setName("BBQ");
+                       bb.setItems(bbq);
+                       bb.setBill(bbq*300);
+                       r.getBills().add(bb);
+                    
+                       
+                       
+                            
                        break;
                        case 2:
-                           list.add("Vegetarian");
-                       numbers.add(veg*300);
-                       x.add(i);
-                        System.out.println("list="+list.get(0));
+                           
+                       Bill bb1=new Bill();
+                       bb1.setName("Vegetarian");
+                       bb1.setItems(veg);
+                       bb1.setBill(veg*300);
+                       r.getBills().add(bb1);
+                           
+                   
                        break;
                        case 3:
-                           list.add("Pepperoni");
-                       numbers.add(pepro*300);
-                       x.add(i);
-                        System.out.println("list="+list.get(0));
+                           
+                       Bill bb2=new Bill();
+                       bb2.setName("Pepperoni");
+                       bb2.setItems(pepro);
+                       bb2.setBill(pepro*300);
+                       r.getBills().add(bb2);
+                           
+                        
                        break;
                        case 4:
-                           list.add("Hawaiian");
-                       numbers.add(hawaii*350);
-                       x.add(i);
-                        System.out.println("list="+list.get(0));
+                           
+                       Bill bb3=new Bill();
+                       bb3.setName("Hawaiian");
+                       bb3.setItems(hawaii);
+                       bb3.setBill(hawaii*350);
+                      r.getBills().add(bb3);
+                           
+                       
                        break;
                        case 5:
-                           list.add("Cheese");
-                       numbers.add(cheese*350);
-                       x.add(i);
-                        System.out.println("list="+list.get(0));
+                          
+                       Bill bb4=new Bill();
+                       bb4.setName("Cheese");
+                       bb4.setItems(cheese);
+                       bb4.setBill(cheese*350);
+                      r.getBills().add(bb4);
+                           
+                        
                        break;
                        default:
                            jl19.setText("Please Select any Item");
                }
            }
        }
-       showTable(jTable1);
+        
+     
+        Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+      model = new DefaultTableModel(coloumns,0);
+//        model.setColumnIdentifiers(coloumns);
+//                    jTable1.setModel(model);
+            Object[] arr1 = new Object[3];        
+
+                  
+                  System.out.println(Resti.getinstance().getBills().size());
+       DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
+        for (int i = 0; i <r.getBills().size(); i++) {
+            
+            
+            arr1[0] = r.getBills().get(i).getName();
+            arr1[1] = r.getBills().get(i).getItems();
+            arr1[2] = r.getBills().get(i).getBill();
+            model.addRow(arr1);
+            jTable1.setModel(model);
+            }
+        
        jPanel15.setVisible(true);
        jTable1.setVisible(true);
        jp1.setVisible(false);
@@ -1244,6 +1368,15 @@ public void changecolor(JPanel hover, Color rand) {
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_b5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        jTable1.clearSelection();
+        jPanel15.setVisible(false);
+        jp1.setVisible(true);
+        jPanel5.setVisible(true);
+        jPanel1.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1258,6 +1391,9 @@ public void changecolor(JPanel hover, Color rand) {
     private javax.swing.JButton b5;
     private javax.swing.JButton b6;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1268,6 +1404,7 @@ public void changecolor(JPanel hover, Color rand) {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1282,7 +1419,8 @@ public void changecolor(JPanel hover, Color rand) {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
+    public javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1291,13 +1429,13 @@ public void changecolor(JPanel hover, Color rand) {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable jTable1;
     private javax.swing.JLabel jl13;
     private javax.swing.JLabel jl14;
-    private javax.swing.JLabel jl19;
+    public javax.swing.JLabel jl19;
     private javax.swing.JLabel jl2;
     private javax.swing.JPanel jp1;
+    public javax.swing.JScrollPane jsp1;
     private java.awt.Label label10;
     private java.awt.Label label11;
     private java.awt.Label label12;

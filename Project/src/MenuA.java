@@ -1,3 +1,8 @@
+
+import java.util.ArrayList;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,14 +14,35 @@
  * @author Stallion
  */
 public class MenuA extends javax.swing.JFrame {
-
+     private ArrayList<String> list=new ArrayList<>();
+         private ArrayList<Integer> numbers=new ArrayList<>();
+    private ArrayList<Integer> x=new ArrayList<>();
+private DefaultTableModel model=new DefaultTableModel();
     /**
      * Creates new form MenuA
      */
+    Resti a = Resti.getinstance();
     public MenuA() {
         initComponents();
-        jsp1.setVisible(false);
-        jsp2.setVisible(false);
+        
+       // jTabbedPane2.setSelectedIndex(0);
+        Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+        model = new DefaultTableModel(coloumns,0);
+        jTable1.setModel(model);
+        //     model.setColumnIdentifiers(coloumns);
+        //                    jTable1.setModel(model);
+        Object[] arr1 = new Object[3];
+
+        System.out.println(Resti.getinstance().getBills().size());
+        DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
+        for (int i = 0; i <Resti.getinstance().getBills().size(); i++) {
+
+            arr1[0] = a.getBills().get(i).getName();
+            arr1[1] = a.getBills().get(i).getItems();
+            arr1[2] = a.getBills().get(i).getBill();
+            model.addRow(arr1);
+             jTable1.setModel(model);
+        }
     }
 
     /**
@@ -28,10 +54,6 @@ public class MenuA extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jsp1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jsp2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -43,63 +65,16 @@ public class MenuA extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        Orderpanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        Feedbackpanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTable1.setBackground(new java.awt.Color(255, 204, 204));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Name", "Items", "Bills"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jsp1.setViewportView(jTable1);
-
-        getContentPane().add(jsp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 660, 190));
-
-        jTable2.setBackground(new java.awt.Color(255, 204, 204));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Name", "Feedback"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jsp2.setViewportView(jTable2);
-
-        getContentPane().add(jsp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 130, 660, 190));
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -130,12 +105,14 @@ public class MenuA extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)))
+                .addGap(16, 16, 16))
         );
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 120));
@@ -243,13 +220,69 @@ public class MenuA extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 131, -1, 190));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 121, -1, 400));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 320));
+        Orderpanel.setBackground(new java.awt.Color(102, 0, 255));
+        Orderpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setBackground(new java.awt.Color(0, 255, 204));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        Orderpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 410));
+
+        jTabbedPane2.addTab("tab1", Orderpanel);
+
+        Feedbackpanel.setBackground(new java.awt.Color(204, 255, 255));
+
+        javax.swing.GroupLayout FeedbackpanelLayout = new javax.swing.GroupLayout(Feedbackpanel);
+        Feedbackpanel.setLayout(FeedbackpanelLayout);
+        FeedbackpanelLayout.setHorizontalGroup(
+            FeedbackpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 655, Short.MAX_VALUE)
+        );
+        FeedbackpanelLayout.setVerticalGroup(
+            FeedbackpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 402, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("tab2", Feedbackpanel);
+
+        jPanel1.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 660, 430));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void showTable(JTable table,ArrayList<Bill> list){
+        Object[] coloumns = {"Item Name", "Number(x)", "Bill"};
+        model = new DefaultTableModel(coloumns,0);
+        //     model.setColumnIdentifiers(coloumns);
+        //                    jTable1.setModel(model);
+        Object[] arr1 = new Object[3];
+
+        System.out.println(Resti.getinstance().getBills().size());
+        DefaultTableModel s = (DefaultTableModel) jTable1.getModel();
+        for (int i = 0; i <a.getBills().size(); i++) {
+
+            arr1[0] = list.get(i).getName();
+            arr1[1] = list.get(i).getItems();
+            arr1[2] = list.get(i).getBill();
+            model.addRow(arr1);
+            jTable1.setModel(model);
+        }
+    }
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
@@ -259,16 +292,15 @@ public class MenuA extends javax.swing.JFrame {
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         // TODO add your handling code here:
-        jsp1.setVisible(true);
-        jsp2.setVisible(false);
+        jTabbedPane2.setSelectedIndex(0);
+        
     //    jPanel7.setVisible(false);
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
        
-                jsp1.setVisible(false);
-                 jsp2.setVisible(true);
+                jTabbedPane2.setSelectedIndex(1);
       //  jPanel7.setVisible(false);
         
     }//GEN-LAST:event_jPanel6MouseClicked
@@ -316,6 +348,8 @@ public class MenuA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Feedbackpanel;
+    private javax.swing.JPanel Orderpanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -327,9 +361,8 @@ public class MenuA extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JScrollPane jsp1;
-    private javax.swing.JScrollPane jsp2;
     // End of variables declaration//GEN-END:variables
 }
